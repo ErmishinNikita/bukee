@@ -1,0 +1,139 @@
+body {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto Slab", serif;
+}
+
+.page-main {
+  background-image: url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.header__logo {
+  background-image: url(../img/logo.svg);
+  display: block;
+  width: 137px;
+  height: 28px;
+  background-repeat: no-repeat;
+  margin-left: 100px;
+}
+.header-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 300px;
+}
+.header-list__item {
+  margin-left: 15px;
+  padding-right: 20px;
+}
+.header-list__item :hover {
+  margin-left: 15px;
+  padding-right: 20px;
+}
+
+.block-book {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1290px;
+  color: #fff;
+}
+.block-book .block-cover {
+  background-image: url(../img/book.png);
+  display: block;
+  width: 900px;
+  height: 700px;
+  background-repeat: no-repeat;
+}
+.block-book .block-text {
+  margin-right: 290px;
+  width: 890px;
+}
+.block-book .block-text__btn {
+  border-radius: 3px solid;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 15px;
+  background-color: rgb(22, 206, 151);
+  display: inline-block;
+  box-shadow: 3px rgb(0, 119, 63);
+}
+.block-book .block-text__title {
+  font-size: 40px;
+}
+.block-book .block-text span {
+  display: block;
+  font-size: 20px;
+  color: aquamarine;
+}
+
+.block-author {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1290px;
+  color: #000000;
+}
+.block-author .block-cover {
+  background-image: url(../img/nadanapervfoto.png);
+  display: block;
+  width: 900px;
+  height: 700px;
+  background-repeat: no-repeat;
+}
+.block-author .block-text {
+  margin-right: 290px;
+  width: 890px;
+}
+.block-author .block-text__btn {
+  border-radius: 3px solid;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 15px;
+  background-color: rgb(22, 206, 151);
+  display: inline-block;
+  box-shadow: 3px rgb(0, 119, 63);
+}
+.block-author .block-text__title {
+  font-size: 40px;
+}
+.block-author .block-text span {
+  display: block;
+  font-size: 20px;
+  color: aquamarine;
+}
+
+.block-counter {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+}
+.block-counter > p {
+  margin-left: 90px;
+  margin-right: 90px;
+  font-size: 12px;
+  color: #093827;
+  font-weight: 10;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+.block-counter > p > span {
+  font-size: 80px;
+  font-weight: 3;
+  letter-spacing: -2px;
+  color: #01d394;
+  display: block;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=style.css.map */
