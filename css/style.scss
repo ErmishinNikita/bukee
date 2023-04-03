@@ -1,145 +1,179 @@
-//font-family: 'Open Sans', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+$light-color: #fff;
+$accent-color: #65e496;
+
 body {
-    color:rgb(0, 0, 0);
     font-family: 'Roboto Slab', serif;
 }
 
-.page-main{
+.page-main {
     background-image: url(../img/main-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: $light-color;
+    padding-bottom: 50px;
 }
 
-.header {
+.header{
     display: flex;
-    color: #fff;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 165px;
 
     &__logo{
         background-image: url(../img/logo.svg);
+        background-repeat: no-repeat;
         display: block;
         width: 137px;
         height: 28px;
-        background-repeat: no-repeat;
-        margin-left: 100px;
     }
 
     &-list{
         list-style-type: none;
         display: flex;
-        justify-content:flex-end ;
-        padding-right: 300px;
+        justify-content: flex-end;
+        font-family: 'Open Sans', sans-serif;
 
         &__item{
-            margin-left: 15px;
-            padding-right: 20px;
-            :hover{
-                margin-left: 15px;
-                padding-right: 20px;
+            margin-left: 22px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid  transparent;
+            transition: 0.3s;
+            
+            &:hover{
+                border-bottom: 3px solid  $accent-color;
             }
         }
+
+        &__item.active{
+            border-bottom: 3px solid  $accent-color;
+        }
+
+        &__link{
+            color: $light-color;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+
+
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.block-text {
+    flex-basis: calc(95% - 500px);
+
+    &__name{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        margin-bottom: 30px;
+    }
+
+    &__title{
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+        margin-bottom: 45px;
+
+        span{
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+            margin-top: 10px;
+            letter-spacing: 0.9px;
+        }
+    }
+
+    &__description{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+    }
+
+    &__btn{
+        display: block;
+        background-color: $accent-color;
+        color: $light-color;
+        text-decoration: none;
+        max-width: 250px;
+        text-align: center;
+        border-radius: 3px;
+        
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding: 15px 0;
+        letter-spacing: 0.7px;
+}
+}
+
+.block-cover{
+    &-demo{
+        display: block;
+        width: 447px;
+        height: 643px;
+        background-image: url(../img/book.svg);
+        background-repeat: no-repeat;
+        flex-basis: 500px;
     }
 }
 
 .block-book{
-    padding-top: 100px;
     display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 1290px;
-    color: #fff;
-    .block-cover{
-        background-image: url(../img/book.png);
-        display: block;
-        width: 900px;
-        height: 700px;
-        background-repeat: no-repeat;
-    }
-    .block-text{
-        margin-right: 290px;
-        width: 890px;
-        &__btn{
-            border-radius: 3px solid;
-            color:#fff;
-            text-decoration: none;
-            padding: 20px 15px;
-            background-color: rgb(22, 206, 151);
-            display: inline-block;
-            box-shadow: 3px rgb(0, 119, 63);
-        } 
-        &__title{
-            font-size: 40px;
-        }
-        span{
-            display: block;
-            font-size: 20px;
-            color: aquamarine;
-        }
-    }    
+    justify-content: space-between;
 }
 
-
 .block-author{
-    padding-top: 100px;
+    padding-top: 150px;
     display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 1290px;
-    color: #000000;
-    .block-cover{
-        background-image: url(../img/nadanapervfoto.png);
-        display: block;
-        width: 900px;
-        height: 700px;
-        background-repeat: no-repeat;
+    justify-content: space-between;
+}
+
+.block-cover{
+    position: relative;
+    &__svg{
+        position: absolute;
+        z-index: -1;
+        right: 0;
     }
-    .block-text{
-        margin-right: 290px;
-        width: 890px;
-        &__btn{
-            border-radius: 3px solid;
-            color:#fff;
-            text-decoration: none;
-            padding: 20px 15px;
-            background-color: rgb(22, 206, 151);
-            display: inline-block;
-            box-shadow: 3px rgb(0, 119, 63);
-        } 
-        &__title{
-            font-size: 40px;
-        }
-        span{
-            display: block;
-            font-size: 20px;
-            color: aquamarine;
-        }
-    } 
-    
+
+    &__img{
+        margin-top: 45px;
+        margin-right: 45px;
+    }
 }
 
 .block-counter{
     display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-    &>p {
-        margin-left: 90px;
-        margin-right: 90px;
-        font-size: 12px;
-        color: #093827;
-        font-weight: 10;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
+    justify-content: space-around;
+    margin-top: 150px;
+
+    p{
+        font-family: 'Open Sans', sans-serif;
         text-align: center;
-        &>span {
-            font-size: 80px;
-            font-weight: 3;
-            letter-spacing: -2px;
-            color: #01d394;
+        font-size: 18px;
+        span{
+            font-family: 'Roboto Slab', serif;
             display: block;
-            margin-bottom: 5px;
+            font-size: 80px;
+            font-weight: 100;
+            color: $accent-color;
+            margin-bottom: 12px;
         }
     }
 }
